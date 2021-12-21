@@ -2,14 +2,13 @@
 
 namespace Leanlink\Provider;
 
-use GuzzleHttp\Client;
 use Leanlink\Model\Resource;
 
 class ResourceProvider extends BaseProvider
 {
     public function find(string $id)
     {
-        $response = $this->get(self::BASE_URL . 'resources/' . $id, $this->apiToken);
+        $response = $this->get(self::BASE_URL . 'resources/' . $id);
         if ($response->getStatusCode() == 404) {
             return null;
         }
