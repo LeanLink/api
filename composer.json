@@ -1,0 +1,30 @@
+{
+    "name": "leanlink/api",
+    "description": "Leanlink API wrapper",
+    "type": "package",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "authors": [
+      {
+        "name": "Jon Gotlin",
+        "email": "jon@jon.se"
+      }
+    ],
+    "prefer-stable": true,
+    "require": {
+        "php": ">=8.0",
+        "guzzlehttp/guzzle": "^7.4"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": {
+            "*": "dist"
+        },
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "Leanlink\\": "src"
+        }
+    }
+}
