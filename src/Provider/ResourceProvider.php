@@ -12,9 +12,12 @@ class ResourceProvider extends BaseProvider
         if ($response->getStatusCode() == 404) {
             return null;
         }
+        if ($response->getStatusCode() == 401) {
+            return null;
+        }
 
         $data = json_decode($response->getBody()->getContents(), true);
-        
+
         $resource = new Resource($data['id']);
         $resource->setFirstName($data['firstName']);
         $resource->setLastName($data['lastName']);
