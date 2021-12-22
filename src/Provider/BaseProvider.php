@@ -6,7 +6,7 @@ use GuzzleHttp\Client;
 
 abstract class BaseProvider
 {
-    public const BASE_URL = 'https://staging.leanlink.io/public/api/';
+    public const BASE_URL = 'https://app.leanlink.io/public/api/';
 
     public function __construct(protected Client $client, protected ?string $apiToken)
     {}
